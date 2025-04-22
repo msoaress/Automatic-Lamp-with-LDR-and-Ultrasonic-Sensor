@@ -4,9 +4,9 @@
 
 int TRIGGER_PIN = 9;
 int ECHO_PIN    = 10;
-int MAX_DISTANCE = 100;
+int MAX_DISTANCE = 20;
 int ldr = A3;  //pino no qual o sensor esta conectado
-int valorldr = 0;  //variavel apra armazenar a leitura do sensor
+int valorldr = 0;  //variavel para armazenar a leitura do sensor
 
 NewPing sensor( TRIGGER_PIN,ECHO_PIN,MAX_DISTANCE);
 gp_io out_di;
@@ -26,9 +26,11 @@ void setup() {
 
 void loop() {
 
+    delay(1250);
+
     int distancia = sensor.ping_cm();
     valorldr = analogRead(ldr);  //leitura do sensor
-    delay(250);
+
 
 
 
