@@ -4,7 +4,7 @@
 
 int TRIGGER_PIN = 9;
 int ECHO_PIN    = 10;
-int MAX_DISTANCE = 20;
+int MAX_DISTANCE = 100;
 int ldr = A3;  //pino no qual o sensor esta conectado
 int valorldr = 0;  //variavel apra armazenar a leitura do sensor
 
@@ -32,7 +32,7 @@ void loop() {
 
 
 
-    if(distancia >10 ) {
+    if(distancia >60 ) {
 
         digitalWrite(out_di.getgp_io(), out_di.nivel_alt);
         Serial.print("Distancia: ");
