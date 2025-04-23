@@ -5,7 +5,7 @@
 int TRIGGER_PIN = 9; // gpio 9
 int ECHO_PIN    = 10;  // gpio 10
 int MAX_DISTANCE = 100; // define o range do sensor ultrasônico
-int ldr = A3;  //pino no qual o sensor esta conectado
+int ldr = A3;  //defino pino analogico para o sensor ldr
 int valorldr = 0;  //variavel para armazenar a leitura do sensor
 
 NewPing sensor( TRIGGER_PIN,ECHO_PIN,MAX_DISTANCE);   // cria uma nova instância da classe newping
