@@ -4,7 +4,7 @@
 
 int TRIGGER_PIN = 9; // gpio 9
 int ECHO_PIN    = 10;  // gpio 10
-int MAX_DISTANCE = 100; // define o range do sensor ultrasônico
+int MAX_DISTANCE = 200; // define o range do sensor ultrasônico
 int ldr = A3;  //defino pino analogico para o sensor ldr
 int valorldr = 0;  //variavel para armazenar a leitura do sensor
 
@@ -38,7 +38,7 @@ void loop() {
 
 
 
-    if(distancia >60 ) { // se a distância for maior que 60 o bloco abaixo será executado
+    if((distancia >10) & (distancia < 100) ) { // se a distância for maior que 60 o bloco abaixo será executado
 
         digitalWrite(out_di.getgp_io(), out_di.nivel_alt);   // coloca out_di em nivel alto, ligando a lampada
 
